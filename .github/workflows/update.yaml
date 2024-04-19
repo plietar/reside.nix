@@ -1,0 +1,20 @@
+name: Nightly r-universe update
+on:
+  schedule:
+    - cron: '0 0 * * *' # Daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  update-r-universe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v17
+      - name: Update r-universe
+        run: |
+          nix run .#update-r-universe
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update r-universe"
