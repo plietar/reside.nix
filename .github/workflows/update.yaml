@@ -10,8 +10,10 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: cachix/install-nix-action@v17
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v26
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Update r-universe
         run: |
           nix run .#update-r-universe
