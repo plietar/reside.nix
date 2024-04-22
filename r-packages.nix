@@ -22,6 +22,28 @@ prev:
     buildInputs = old.buildInputs ++ [ gperftools ];
   });
 
+  cmdstanr = rPackages.buildRPackage rec {
+    name = "cmdstanr";
+
+    src = fetchFromGitHub {
+      owner = "stan-dev";
+      repo = "cmdstanr";
+      rev = "v0.7.1";
+      hash = "sha256-04PjuU4E/KzRPir0nO2aDow5yt8/rStf3efW0T7Lo8M=";
+    };
+
+    propagatedBuildInputs = [
+      rPackages.checkmate
+      rPackages.data_table
+      rPackages.jsonlite
+      rPackages.posterior
+      rPackages.processx
+      rPackages.R6
+      rPackages.withr
+      rPackages.rlang
+    ];
+  };
+
   rethinking = rPackages.buildRPackage {
     name = "rethinking";
     src = fetchFromGitHub {
@@ -38,6 +60,7 @@ prev:
       rPackages.mvtnorm
       rPackages.loo
       rPackages.shape
+      rPackages.cmdstanr
     ];
   };
 
