@@ -1,3 +1,6 @@
+excludePackages <- c("orderly.sharepoint")
+builtinPackages <- c("R", rownames(installed.packages(priority="base")))
+
 formatPackage <- function(name, version, sha256, depends, imports, linkingTo, url) {
     attr <- gsub(".", "_", name, fixed=TRUE)
     depends <- c( if (is.na(depends)) character(0) else gsub("[ \t\n]+", "", depends)
@@ -6,8 +9,8 @@ formatPackage <- function(name, version, sha256, depends, imports, linkingTo, ur
     depends <- unlist(strsplit(depends, split=",", fixed=TRUE))
     depends <- lapply(depends, gsub, pattern="([^ \t\n(]+).*", replacement="\\1")
     depends <- lapply(depends, gsub, pattern=".", replacement="_", fixed=TRUE)
+    depends <- depends[!depends %in% builtinPackages]
     # depends <- depends[depends %in% knownPackages]
-    depends <- depends[depends != "R"]
     depends <- paste(depends)
     depends <- paste(sort(unique(depends)), collapse=" ")
     paste0("  ", attr, " = derive { name=\"", name, "\"; version=\"", version, "\"; url=\"", url, "\"; sha256=\"", sha256, "\"; buildInputs=[", depends, "]; };")
@@ -15,6 +18,7 @@ formatPackage <- function(name, version, sha256, depends, imports, linkingTo, ur
 
 sources <- commandArgs(trailingOnly=TRUE)
 packages <- as.data.frame(available.packages(repos=sources, filters=c("R_version", "OS_type", "duplicates")))
+packages <- packages[!packages$Package %in% excludePackages,]
 packages[,"url"] <- apply(packages, 1, function(p) paste0(p["Repository"], "/", p["Package"], "_", p["Version"], ".tar.gz"))
 packages[,"sha256"] <- apply(packages, 1, function(p) system(paste("nix-prefetch-url", "--unpack", p["url"]), intern=TRUE))
 
