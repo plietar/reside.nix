@@ -77,7 +77,7 @@ prev:
     ];
   };
 
-  bench = prev.rPackages.bench.overrideAttrs (old: {
+  bench = prev.bench.overrideAttrs (old: {
     src = fetchFromGitHub {
       owner = "plietar";
       repo = "bench";

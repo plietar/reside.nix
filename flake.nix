@@ -9,19 +9,19 @@
   outputs = { flake-utils, nixpkgs, self }:
     let
       inherit (nixpkgs) lib;
-      overrides = final: prev: lib.attrsets.mergeAttrsList [
-        (final.callPackage ./r-universe { }).mrc-ide
-        (final.callPackage (import ./r-packages.nix prev) { })
+      rOverlay = pkgs: final: prev: lib.attrsets.mergeAttrsList [
+        (pkgs.callPackage ./r-universe { }).mrc-ide
+        (pkgs.callPackage (import ./r-packages.nix prev) { })
       ];
     in
     {
-      overlays = {
-        default = final: prev: {
-          rPackages = prev.rPackages.override {
-            overrides = overrides final prev;
-          };
-        };
-      };
+      lib.rPackagesOverlay = f: (final: prev: {
+        rPackages = prev.rPackages.override (old: {
+          overrides = old.overrides // f final final.rPackages prev.rPackages;
+        });
+      });
+
+      overlays.default = self.lib.rPackagesOverlay rOverlay;
     } // flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs' = import nixpkgs { inherit system; };
@@ -30,7 +30,7 @@
       {
         packages =
           let
-            names = lib.attrNames (overrides pkgs pkgs');
+            names = lib.attrNames (rOverlay pkgs pkgs.rPackages pkgs'.rPackages);
             f = name: pkgs.rPackages."${name}";
             g = _: value: value ? type && value.type == "derivation";
           in
