@@ -4,10 +4,8 @@ prev:
   jointprof = (rPackages.buildRPackage {
     name = "jointprof";
     src = fetchFromGitHub {
-      # owner = "r-prof";
       repo = "jointprof";
-      # rev = "180c6816b4114ca436fd93c5ec263a87465e53f4";
-      # hash = "sha256-Sls00LxZYASps1q3sAf4rJvdxQvxbMMNqd0iYgmRslw=";
+      # owner = "r-prof";
       owner = "plietar";
       rev = "3d9fe930c47eb7db1a08ca7efcb5705c8508dbf3";
       hash = "sha256-RgRTLZKuzlOxB9rsjq85Xg2FL5XgxMhsTfqe4jMk3c0=";
@@ -83,6 +81,15 @@ prev:
       repo = "bench";
       rev = "4337cab72c290c4cebbb863ea22575cba21940d9";
       hash = "sha256-FNQb/1fGdRD+AclRPXFU5W5B7syES2NbRUx6nprurFg=";
+    };
+  });
+
+  profvis = prev.profvis.overrideAttrs (old: {
+    src = fetchFromGitHub {
+      owner = "mrc-ide";
+      repo = "profvis";
+      rev = "60437d3b63c0f52cd8779129b160486ef9376848";
+      hash = "sha256-DjoRY+GXbvXa7PPFC0YSsk1M9bOUH4CPyCPxTleJPZQ=";
     };
   });
 }
