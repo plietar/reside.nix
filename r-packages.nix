@@ -92,4 +92,29 @@ prev:
       hash = "sha256-DjoRY+GXbvXa7PPFC0YSsk1M9bOUH4CPyCPxTleJPZQ=";
     };
   });
+
+  touchstone = rPackages.buildRPackage {
+    name = "touchstone";
+    src = fetchFromGitHub {
+      owner = "lorenzwalthert";
+      repo = "touchstone";
+      rev = "27004bb9f59251dc7117c7af06dfb225d83445c1";
+      hash = "sha256-WFytzDu8248tYLQSmGAGm+oQAUDfrOWiE26SMRgxO2M=";
+    };
+
+    propagatedBuildInputs = [
+      rPackages.bench
+      rPackages.callr
+      rPackages.cli
+      rPackages.fs
+      rPackages.gert
+      rPackages.magrittr
+      rPackages.purrr
+      rPackages.remotes
+      rPackages.rlang
+      rPackages.tibble
+      rPackages.vctrs
+      rPackages.withr
+    ];
+  };
 }
