@@ -117,4 +117,33 @@ prev:
       rPackages.withr
     ];
   };
+
+  epireview = rPackages.buildRPackage {
+    name = "epireview";
+    src = fetchFromGitHub {
+      owner = "mrc-ide";
+      repo = "epireview";
+      rev = "ef4b894dfbce027c7b319f8b9ff11a26590630bc";
+      hash = "sha256-0OBmkncCoSq7QTgQlUwpFaArIUiIQcAkAwrmBU0zCVo=";
+    };
+
+    propagatedBuildInputs = [
+      rPackages.epitrix
+      rPackages.ggplot2
+      rPackages.ggforce
+      rPackages.tibble
+      rPackages.dplyr
+      rPackages.tidyr
+      rPackages.readr
+      rPackages.patchwork
+      rPackages.flextable
+      rPackages.tm
+      rPackages.officer
+      rPackages.stringr
+      rPackages.validate
+      rPackages.pals
+      rPackages.paletteer
+      rPackages.scales
+    ];
+  };
 }
