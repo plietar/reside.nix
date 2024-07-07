@@ -71,7 +71,7 @@ with self; {
   testthat_buildkite = derive { name="testthat.buildkite"; version="0.0.1"; url="https://mrc-ide.r-universe.dev/src/contrib/testthat.buildkite_0.0.1.tar.gz"; sha256="1lj8k0d2psy2ghg1243wc1bcgq1a2dswpl1gphshcjqp9az6v39i"; buildInputs=[testthat]; };
   threemc = derive { name="threemc"; version="0.1.45"; url="https://mrc-ide.r-universe.dev/src/contrib/threemc_0.1.45.tar.gz"; sha256="1z63cih8pbll3i9zf9m1klmrn3a3frvj9yxp46rr1f1cc0lp306a"; buildInputs=[data_table dplyr loo Matrix mgcv mvtnorm R_utils RcppEigen rlang scoringutils sf spdep stringr tidyr TMB]; };
   traduire = derive { name="traduire"; version="0.1.0"; url="https://mrc-ide.r-universe.dev/src/contrib/traduire_0.1.0.tar.gz"; sha256="047nnp8qaj9kyqr4l3nivbdzgv67wlpxriygs4y9xpbccmn9g0nm"; buildInputs=[glue R6 V8]; };
-  vaultr = derive { name="vaultr"; version="1.2.0"; url="https://mrc-ide.r-universe.dev/src/contrib/vaultr_1.2.0.tar.gz"; sha256="1bfaivxh4cy6q4xm0vbqibji67h2y6mranzddsj68vwpz2mpmxsn"; buildInputs=[getPass httr jsonlite R6]; };
+  vaultr = derive { name="vaultr"; version="1.2.0"; url="https://mrc-ide.r-universe.dev/src/contrib/vaultr_1.2.0.tar.gz"; sha256="1xw8k0a13bhp6cdl9iglvp3qp046iag6416akrhr814vw9ql5xwa"; buildInputs=[getPass httr jsonlite R6]; };
   vimpact = derive { name="vimpact"; version="0.1.3"; url="https://mrc-ide.r-universe.dev/src/contrib/vimpact_0.1.3.tar.gz"; sha256="1sr8rvc84mimil40c81mbhxm783q6zq61wn5hb7zjf7x4q6956bi"; buildInputs=[DBI dbplyr dplyr glue magrittr rlang RPostgres vaultr]; };
   weighter = derive { name="weighter"; version="0.0.1"; url="https://mrc-ide.r-universe.dev/src/contrib/weighter_0.0.1.tar.gz"; sha256="068a679x6af70402ckrfr8dfvsmyygydylk4xaahg3fsqr9kr6x7"; buildInputs=[]; };
 }
