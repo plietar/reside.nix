@@ -146,4 +146,46 @@ prev:
       rPackages.scales
     ];
   };
+
+  daedalus = rPackages.buildRPackage {
+    name = "daedalus";
+    src = fetchFromGitHub {
+      owner = "jameel-institute";
+      repo = "daedalus";
+      rev = "23fd7e6a0baff712c42e39bc764beb8c264f9a38";
+      hash = "sha256-qC4A5naPLoGRQVxdQ6wvqeAU+JN4QGX+Hj/6FnHoFDw=";
+    };
+
+    propagatedBuildInputs = [
+      rPackages.checkmate
+      rPackages.cli
+      rPackages.data_table
+      rPackages.deSolve
+      rPackages.rlang
+    ];
+  };
+
+  daedalus_api = rPackages.buildRPackage {
+    name = "daedalus.api";
+    src = fetchFromGitHub {
+      owner = "jameel-institute";
+      repo = "daedalus.api";
+      rev = "56fd752843cd8bd70da6566cd1d5edb9233da93d";
+      hash = "sha256-XVo3j5UaDrVcECpRXS4zlqtTQyyn03pVMDUlx+6lTqM=";
+    };
+    propagatedBuildInputs = [
+      rPackages.daedalus
+      rPackages.docopt
+      rPackages.dplyr
+      rPackages.jsonlite
+      rPackages.lgr
+      rPackages.openssl
+      rPackages.porcelain
+      rPackages.R6
+      rPackages.redux
+      rPackages.rrq
+      rPackages.stringr
+      rPackages.tidyr
+    ];
+  };
 }
