@@ -22,6 +22,25 @@
             overrides = old.overrides // f final final.rPackages prev.rPackages;
           });
         });
+
+        lib.devShellFor = pkgs: p: pkgs.mkShell {
+          inputsFrom = [ p ];
+          buildInputs = [
+            pkgs.rPackages.pandoc
+            pkgs.rPackages.devtools
+            pkgs.rPackages.mockery
+            pkgs.rPackages.markdown
+
+            pkgs.radianWrapper
+            pkgs.pandoc
+          ];
+          shellHook = ''
+            export R_REMOTES_UPGRADE=never
+            export R_LIBS_USER=$TMPDIR/libs
+            mkdir $R_LIBS_USER
+          '';
+        };
+
         overlays.default = self.lib.rPackagesOverlay rOverlay;
       };
 
@@ -30,27 +49,7 @@
           let pkgs' = pkgs.extend (self.lib.rPackagesOverlay rOverlay);
           in rOverlay pkgs' pkgs'.rPackages pkgs.rPackages;
 
-        devShells =
-          let
-            mkRDevShell = name: p: pkgs.mkShell {
-              inputsFrom = [ p ];
-              buildInputs = [
-                pkgs.rPackages.pandoc
-                pkgs.rPackages.devtools
-                pkgs.rPackages.mockery
-                pkgs.rPackages.markdown
-
-                pkgs.radianWrapper
-                pkgs.pandoc
-              ];
-              shellHook = ''
-                export R_REMOTES_UPGRADE=never
-                export R_LIBS_USER=$TMPDIR/libs
-                mkdir $R_LIBS_USER
-              '';
-            };
-          in
-          lib.mapAttrs mkRDevShell self'.packages;
+        devShells = lib.mapAttrs (name: p: self.lib.devShellFor pkgs p) self'.packages;
 
         apps.update-r-universe.program = pkgs.writeShellApplication {
           name = "update-r-universe";
