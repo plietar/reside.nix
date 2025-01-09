@@ -84,14 +84,14 @@ prev:
     };
   });
 
-  profvis = prev.profvis.overrideAttrs (old: {
-    src = fetchFromGitHub {
-      owner = "mrc-ide";
-      repo = "profvis";
-      rev = "60437d3b63c0f52cd8779129b160486ef9376848";
-      hash = "sha256-DjoRY+GXbvXa7PPFC0YSsk1M9bOUH4CPyCPxTleJPZQ=";
-    };
-  });
+  # profvis = prev.profvis.overrideAttrs (old: {
+  #   src = fetchFromGitHub {
+  #     owner = "mrc-ide";
+  #     repo = "profvis";
+  #     rev = "60437d3b63c0f52cd8779129b160486ef9376848";
+  #     hash = "sha256-DjoRY+GXbvXa7PPFC0YSsk1M9bOUH4CPyCPxTleJPZQ=";
+  #   };
+  # });
 
   touchstone = rPackages.buildRPackage {
     name = "touchstone";
