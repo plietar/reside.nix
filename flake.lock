@@ -18,18 +18,36 @@
         "type": "github"
       }
     },
+    "mrc-ide": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1748599909,
+        "narHash": "sha256-tv2FPHWlfq/4mVRSZmsWBkYq83KBu4TJ7mYdhOpDCcI=",
+        "ref": "refs/heads/master",
+        "rev": "9c87a9611f2413ae83e40d3c99dbebd8bae1402e",
+        "revCount": 1973,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/r-universe/mrc-ide"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/r-universe/mrc-ide"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1731239293,
-        "narHash": "sha256-q2yjIWFFcTzp5REWQUOU9L6kHdCDmFDpqeix86SOvDc=",
+        "lastModified": 1748708770,
+        "narHash": "sha256-q8jG2HJWgooWa9H0iatZqBPF3bp0504e05MevFmnFLY=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9256f7c71a195ebe7a218043d9f93390d49e6884",
+        "rev": "a59eb7800787c926045d51b70982ae285faa2346",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-24.05",
+        "ref": "nixos-25.05",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -49,6 +67,7 @@
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
+        "mrc-ide": "mrc-ide",
         "nixpkgs": "nixpkgs"
       }
     }

@@ -2,15 +2,21 @@
   description = "Packages used at RESIDE";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    mrc-ide = {
+      type = "git";
+      url = "https://github.com/r-universe/mrc-ide";
+      submodules = true;
+      flake = false;
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } ({ self, lib, ... }:
     let
       rOverlay = pkgs: final: prev: lib.mergeAttrsList [
-        (pkgs.callPackage ./r-universe { }).mrc-ide
-        (pkgs.callPackage (import ./r-packages.nix prev) { })
+        (pkgs.callPackages ./r-universe { inherit inputs; })
+        (pkgs.callPackages ./r-packages.nix { })
       ];
     in
     {
@@ -53,9 +59,20 @@
 
         apps.update-r-universe.program = pkgs.writeShellApplication {
           name = "update-r-universe";
-          runtimeInputs = [ pkgs.nix ];
+          runtimeInputs = [
+            (pkgs.rWrapper.override {
+              packages = [
+                pkgs.rPackages.desc
+                pkgs.rPackages.fs
+                pkgs.rPackages.purrr
+                pkgs.rPackages.tibble
+                pkgs.rPackages.dplyr
+                pkgs.rPackages.jsonlite
+              ];
+            })
+          ];
           text = ''
-            ${pkgs.R}/bin/Rscript ${./r-universe/generate-r-universe.R} "https://mrc-ide.r-universe.dev" > r-universe/mrc-ide.nix
+            Rscript ${./r-universe/generate-r-universe.R} ${inputs.mrc-ide} > r-universe/mrc-ide.nix
           '';
         };
       };

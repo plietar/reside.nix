@@ -1,4 +1,3 @@
-prev:
 { gperftools, rPackages, fetchFromGitHub }:
 {
   jointprof = (rPackages.buildRPackage {
@@ -74,24 +73,6 @@ prev:
       rPackages.malariasimulation
     ];
   };
-
-  bench = prev.bench.overrideAttrs (old: {
-    src = fetchFromGitHub {
-      owner = "plietar";
-      repo = "bench";
-      rev = "4337cab72c290c4cebbb863ea22575cba21940d9";
-      hash = "sha256-FNQb/1fGdRD+AclRPXFU5W5B7syES2NbRUx6nprurFg=";
-    };
-  });
-
-  # profvis = prev.profvis.overrideAttrs (old: {
-  #   src = fetchFromGitHub {
-  #     owner = "mrc-ide";
-  #     repo = "profvis";
-  #     rev = "60437d3b63c0f52cd8779129b160486ef9376848";
-  #     hash = "sha256-DjoRY+GXbvXa7PPFC0YSsk1M9bOUH4CPyCPxTleJPZQ=";
-  #   };
-  # });
 
   touchstone = rPackages.buildRPackage {
     name = "touchstone";

@@ -1,16 +1,12 @@
-{ rPackages, fetchzip }:
+{ rPackages, fetchzip, inputs }:
 let
-  importRUniverse = path: import path {
+  importRUniverse = path: src: import path {
     self = rPackages;
-    derive = { name, version, url, sha256, buildInputs }: rPackages.buildRPackage {
+    derive = { name, version, buildInputs }: rPackages.buildRPackage {
       inherit name version;
       propagatedBuildInputs = buildInputs;
-      src = fetchzip {
-        inherit url sha256;
-      };
+      src = "${src}/${name}";
     };
   };
 in
-{
-  mrc-ide = importRUniverse ./mrc-ide.nix;
-}
+importRUniverse ./mrc-ide.nix inputs.mrc-ide

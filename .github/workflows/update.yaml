@@ -16,6 +16,7 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Update r-universe
         run: |
+          nix flake update mrc-ide
           nix run .#update-r-universe
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
