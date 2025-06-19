@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/i5igrm783kcjvbyx9vp983q3w0kzplw1-source
+# Rscript generate-r-universe.R /nix/store/xh0jlb7fmlzdrf2158n9b0kd8qrlzy2k-source
 
 { self, derive }:
 with self; {
@@ -60,7 +60,7 @@ with self; {
   orderly = derive { name = "orderly"; version = "1.6.1"; buildInputs = [DBI R6 RSQLite crayon digest docopt fs gert ids withr yaml zip httr jsonlite knitr markdown mockery processx rmarkdown testthat vaultr]; };
   orderly_db = derive { name = "orderly.db"; version = "0.1.3"; buildInputs = [DBI fs jsonlite orderly2 RSQLite jsonvalidate knitr mockery rmarkdown testthat withr]; };
   orderly_sharedfile = derive { name = "orderly.sharedfile"; version = "0.1.0"; buildInputs = [cli fs jsonlite orderly2 jsonvalidate testthat withr]; };
-  orderly2 = derive { name = "orderly2"; version = "1.99.69"; buildInputs = [R6 cli diffobj fs gert httr2 jsonlite openssl rlang rstudioapi withr yaml DBI RSQLite jsonvalidate knitr mockery pkgload processx rmarkdown stringr testthat]; };
+  orderly2 = derive { name = "orderly2"; version = "1.99.70"; buildInputs = [R6 cli diffobj fs gert httr2 jsonlite openssl rlang rstudioapi withr yaml DBI RSQLite jsonvalidate knitr mockery pkgload processx rmarkdown stringr testthat]; };
   orderlyweb = derive { name = "orderlyweb"; version = "0.1.15"; buildInputs = [R6 gert httr jsonlite orderly progress zip mockery testthat]; };
   popim = derive { name = "popim"; version = "0.0.1"; buildInputs = [knitr rmarkdown testthat dplyr ggplot2 rlang tidyr tidyselect]; };
   porcelain = derive { name = "porcelain"; version = "0.1.16"; buildInputs = [R6 V8 ids jsonlite jsonvalidate lgr plumber callr fs httr knitr mockery pkgload rmarkdown roxygen2 testthat withr]; };
