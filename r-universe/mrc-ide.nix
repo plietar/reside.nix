@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/ddxz9bc5fr129rbh2lbyd47ns5w1mbdr-source
+# Rscript generate-r-universe.R /nix/store/kv3649rbwnba8yh9r9lc9fkd8shfq0y4-source
 
 { self, derive }:
 with self; {
@@ -25,7 +25,7 @@ with self; {
   dust = derive { name = "dust"; version = "0.15.3"; buildInputs = [R6 cpp11 glue pkgbuild pkgload withr cpp11 bench brio callr curl dde decor fs knitr mockery rmarkdown testthat]; };
   dust2 = derive { name = "dust2"; version = "0.3.24"; buildInputs = [cli monty rlang cpp11 monty callr cpp11 decor fs glue knitr mockery numDeriv pkgbuild pkgload rmarkdown testthat withr]; };
   epireview = derive { name = "epireview"; version = "1.4.4"; buildInputs = [epitrix ggplot2 ggforce dplyr readr scales cli vroom knitr lifecycle tidyverse testthat rmarkdown]; };
-  eppasm = derive { name = "eppasm"; version = "0.8.5"; buildInputs = [abind anclik binom epp fastmatch mvtnorm plyr readxl reshape2 vroom xml2 BH testthat knitr rmarkdown covr]; };
+  eppasm = derive { name = "eppasm"; version = "0.8.6"; buildInputs = [abind anclik binom epp fastmatch mvtnorm plyr readxl reshape2 vroom xml2 BH testthat knitr rmarkdown covr]; };
   first90 = derive { name = "first90"; version = "1.7.1"; buildInputs = [mvtnorm Matrix fastmatch Rcpp vroom BH Rcpp testthat]; };
   frogger = derive { name = "frogger"; version = "0.1.2"; buildInputs = [Rcpp RcppEigen beers dplyr eppasm magrittr Rcpp tidyr abind knitr RcppEigen reshape2 rmarkdown SpectrumUtils testthat withr xml2]; };
   gonovax = derive { name = "gonovax"; version = "0.4.23"; buildInputs = [odin dde furrr progress mcstate testthat knitr rmarkdown]; };
