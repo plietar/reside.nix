@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/xn800wpry2az4pjaznq1a9kby4gkyk6l-source
+# Rscript generate-r-universe.R /nix/store/zapyldsnalk1sm56p2vkcxzsj3qwckxg-source
 
 { self, derive }:
 with self; {
@@ -12,6 +12,7 @@ with self; {
   buildr = derive { name = "buildr"; version = "0.0.3"; buildInputs = [R6 httr jsonlite testthat]; };
   cart = derive { name = "cart"; version = "0.1.0"; buildInputs = [knitr rmarkdown roxygen2 testthat dplyr geojsonsf ggplot2 jsonlite magrittr malariaAtlas rlang sf terra tibble tidyr viridis]; };
   cinterpolate = derive { name = "cinterpolate"; version = "1.0.2"; buildInputs = [knitr rmarkdown testthat]; };
+  conan = derive { name = "conan"; version = "2.0.0"; buildInputs = [cli fs glue prettyunits rlang withr callr mockery openssl pkgdepends remotes renv testthat]; };
   conan2 = derive { name = "conan2"; version = "1.9.104"; buildInputs = [cli fs glue prettyunits rlang withr callr mockery openssl pkgdepends remotes renv testthat]; };
   dde = derive { name = "dde"; version = "1.0.7"; buildInputs = [ring deSolve knitr microbenchmark rmarkdown testthat]; };
   defer = derive { name = "defer"; version = "0.1.0"; buildInputs = [testthat]; };
