@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/dzndvcdiw7xdjlichh21mm3q22s745fx-source
+# Rscript generate-r-universe.R /nix/store/k41g58kgfgqsdh8i84zss2b28bga11ax-source
 
 { self, derive }:
 with self; {
@@ -37,6 +37,7 @@ with self; {
   jointlyr = derive { name = "jointlyr"; version = "0.0.1"; buildInputs = [EpiEstim Rcpp RcppParallel rstan rstantools BH Rcpp RcppEigen RcppParallel rstan StanHeaders knitr rmarkdown]; };
   jsonvalidate = derive { name = "jsonvalidate"; version = "1.5.0"; buildInputs = [R6 V8 knitr jsonlite rmarkdown testthat withr]; };
   logwatch = derive { name = "logwatch"; version = "0.1.1"; buildInputs = [cli mockery testthat]; };
+  malariaEquilibrium = derive { name = "malariaEquilibrium"; version = "1.0.1"; buildInputs = [ statmod magrittr ]; };
   malariaEquilibriumVivax = derive { name = "malariaEquilibriumVivax"; version = "1.0.1"; buildInputs = [statmod magrittr]; };
   malariasimulation = derive { name = "malariasimulation"; version = "2.0.2"; buildInputs = [individual malariaEquilibrium malariaEquilibriumVivax Rcpp statmod MASS dqrng sitmo BH R6 progress testthat mockery knitr rmarkdown reshape2 DiagrammeR cowplot ggplot2 covr mgcv Rcpp individual BH testthat dqrng sitmo]; };
   mcstate = derive { name = "mcstate"; version = "0.9.22"; buildInputs = [R6 callr dust processx progress brio coda decor fs knitr mockery mvtnorm odin.dust rmarkdown testthat withr]; };
