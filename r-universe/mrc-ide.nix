@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/wvx4llrx0xydnv8sxcvxsvyxbln8j5xf-source
+# Rscript generate-r-universe.R /nix/store/bxgn4b8nzx51n9b9x5p8r5m5a2j0aq16-source
 
 { self, derive }:
 with self; {
@@ -47,7 +47,7 @@ with self; {
   monty = derive { name = "monty"; version = "0.3.37"; buildInputs = [R6 cli rlang cpp11 callr cpp11 coda decor knitr mockery mvtnorm numDeriv pkgload posterior rmarkdown testthat withr]; };
   moz_utils = derive { name = "moz.utils"; version = "0.1.90"; buildInputs = [dplyr ggplot2 gtools magrittr orderly1 orderlyweb plyr purrr rprojroot sf]; };
   mpoxseir = derive { name = "mpoxseir"; version = "0.2.28"; buildInputs = [cpp11 dust2 monty odin2 testthat dust2 squire dplyr tidyr plyr]; };
-  naomi = derive { name = "naomi"; version = "2.10.12"; buildInputs = [DBI Matrix R6 TMB assertthat brio data.tree dplyr eppasm gt first90 forcats fs ggplot2 magrittr mvtnorm naomi.options openxlsx plotly prettyunits qs readr rlang rmarkdown sf spdep stringr tidyr tidyselect traduire withr writexl yaml zip zoo DiagrammeR covr datamodelr duckdb here knitr lubridate mockery mockr readxl rvest scales testthat tibble tidyverse viridis RcppEigen TMB]; };
+  naomi = derive { name = "naomi"; version = "2.10.13"; buildInputs = [DBI Matrix R6 TMB assertthat brio data.tree dplyr eppasm gt first90 forcats fs ggplot2 magrittr mvtnorm naomi.options openxlsx plotly prettyunits qs readr rlang rmarkdown sf spdep stringr tidyr tidyselect traduire withr writexl yaml zip zoo DiagrammeR covr datamodelr duckdb here knitr lubridate mockery mockr readxl rvest scales testthat tibble tidyverse viridis RcppEigen TMB]; };
   naomi_options = derive { name = "naomi.options"; version = "1.3.0"; buildInputs = [data.table glue jsonlite traduire jsonvalidate testthat mockery]; };
   naomi_resources = derive { name = "naomi.resources"; version = "0.0.5"; buildInputs = [cli readr testthat]; };
   naomi_utils = derive { name = "naomi.utils"; version = "0.0.16"; buildInputs = [dplyr exactextractr forcats ggplot2 haven hintr lubridate magrittr raster rdhs sf spud survey tidyr testthat]; };
@@ -60,7 +60,7 @@ with self; {
   orderly_db = derive { name = "orderly.db"; version = "0.1.3"; buildInputs = [DBI fs jsonlite orderly2 RSQLite jsonvalidate knitr mockery rmarkdown testthat withr]; };
   orderly_sharedfile = derive { name = "orderly.sharedfile"; version = "0.1.0"; buildInputs = [cli fs jsonlite orderly2 jsonvalidate testthat withr]; };
   orderly1 = derive { name = "orderly1"; version = "1.7.1"; buildInputs = [DBI R6 RSQLite crayon digest docopt fs gert ids withr yaml zip httr jsonlite knitr markdown mockery processx rmarkdown testthat vaultr]; };
-  orderly2 = derive { name = "orderly2"; version = "1.99.73"; buildInputs = [R6 cli diffobj fs gert httr2 jsonlite openssl rlang rstudioapi withr yaml DBI RSQLite callr jsonvalidate knitr mockery pkgload processx rmarkdown stringr testthat webfakes]; };
+  orderly2 = derive { name = "orderly2"; version = "1.99.75"; buildInputs = [R6 cli diffobj fs gert httr2 jsonlite openssl rlang rstudioapi withr yaml DBI RSQLite callr jsonvalidate knitr mockery pkgload processx rmarkdown stringr testthat webfakes]; };
   orderlyweb = derive { name = "orderlyweb"; version = "0.1.16"; buildInputs = [R6 gert httr jsonlite orderly1 progress zip mockery testthat]; };
   popim = derive { name = "popim"; version = "0.0.1"; buildInputs = [knitr rmarkdown testthat dplyr ggplot2 rlang tidyr tidyselect]; };
   porcelain = derive { name = "porcelain"; version = "0.1.16"; buildInputs = [R6 V8 ids jsonlite jsonvalidate lgr plumber callr fs httr knitr mockery pkgload rmarkdown roxygen2 testthat withr]; };
