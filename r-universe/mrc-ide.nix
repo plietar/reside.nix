@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/ym95p1gfavrg0km7b3ykswzx0dkzf4f0-source
+# Rscript generate-r-universe.R /nix/store/37jjayax5yk8a7v19jw6inacycqknw7v-source
 
 { self, derive }:
 with self; {
@@ -32,7 +32,7 @@ with self; {
   hintr = derive { name = "hintr"; version = "1.2.12"; buildInputs = [data.table digest docopt dplyr fs geojsonio glue ids jsonlite naomi naomi.options porcelain qs R6 readxl rlang rrq specio storr traduire V8 yaml zip callr cli covr duckdb httr jsonvalidate knitr mockery pkgload ps redux rmarkdown ssh testthat tidyselect withr]; };
   hipercow = derive { name = "hipercow"; version = "1.1.5"; buildInputs = [audio cli fs ids pkgdepends rlang withr bench callr conan2 dust furrr future knitr logwatch mockery openssl prettyunits redux rmarkdown rrq testthat]; };
   hipercow_dide = derive { name = "hipercow.dide"; version = "1.1.5"; buildInputs = [cli conan2 crayon fs glue hipercow httr ids jsonlite keyring logwatch openssl pkgdepends rematch rstudioapi rlang xml2 mockery testthat withr]; };
-  individual = derive { name = "individual"; version = "0.1.17"; buildInputs = [R6 Rcpp ggplot2 knitr mockery rmarkdown pkgdown testthat xml2 bench Rcpp testthat]; };
+  individual = derive { name = "individual"; version = "0.1.18"; buildInputs = [R6 Rcpp ggplot2 knitr mockery rmarkdown pkgdown testthat xml2 bench Rcpp testthat]; };
   jenner = derive { name = "jenner"; version = "0.0.27"; buildInputs = [DBI RcppRoll RPostgres vaultr whisker yaml RSQLite testthat]; };
   jointlyr = derive { name = "jointlyr"; version = "0.0.1"; buildInputs = [EpiEstim Rcpp RcppParallel rstan rstantools BH Rcpp RcppEigen RcppParallel rstan StanHeaders knitr rmarkdown]; };
   jsonvalidate = derive { name = "jsonvalidate"; version = "1.5.0"; buildInputs = [R6 V8 knitr jsonlite rmarkdown testthat withr]; };
