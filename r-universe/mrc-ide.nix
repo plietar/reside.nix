@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/37jjayax5yk8a7v19jw6inacycqknw7v-source
+# Rscript generate-r-universe.R /nix/store/9d2dsiih0s8cklp97byyk1xfz71q2857-source
 
 { self, derive }:
 with self; {
