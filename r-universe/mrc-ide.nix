@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/z6b1h7ga1lg4xiriand4l1p7nsdbmfyb-source
+# Rscript generate-r-universe.R /nix/store/aizy8icyjcp6kpvchjccm509sc0mfy5c-source
 
 { self, derive }:
 with self; {
@@ -48,7 +48,7 @@ with self; {
   moz_utils = derive { name = "moz.utils"; version = "0.1.90"; buildInputs = [dplyr ggplot2 gtools magrittr orderly1 orderlyweb plyr purrr rprojroot sf]; };
   mpoxseir = derive { name = "mpoxseir"; version = "0.2.28"; buildInputs = [cpp11 dust2 monty odin2 testthat dust2 squire dplyr tidyr plyr]; };
   naomi = derive { name = "naomi"; version = "2.10.13"; buildInputs = [DBI Matrix R6 TMB assertthat brio data.tree dplyr eppasm gt first90 forcats fs ggplot2 magrittr mvtnorm naomi.options openxlsx plotly prettyunits qs readr rlang rmarkdown sf spdep stringr tidyr tidyselect traduire withr writexl yaml zip zoo DiagrammeR covr datamodelr duckdb here knitr lubridate mockery mockr readxl rvest scales testthat tibble tidyverse viridis RcppEigen TMB]; };
-  naomi_options = derive { name = "naomi.options"; version = "1.3.0"; buildInputs = [data.table glue jsonlite traduire jsonvalidate testthat mockery]; };
+  naomi_options = derive { name = "naomi.options"; version = "1.3.1"; buildInputs = [data.table glue jsonlite traduire jsonvalidate testthat mockery]; };
   naomi_resources = derive { name = "naomi.resources"; version = "0.0.5"; buildInputs = [cli readr testthat]; };
   naomi_utils = derive { name = "naomi.utils"; version = "0.0.16"; buildInputs = [dplyr exactextractr forcats ggplot2 haven hintr lubridate magrittr raster rdhs sf spud survey tidyr testthat]; };
   nomad = derive { name = "nomad"; version = "0.0.1"; buildInputs = [provisionr yaml testthat]; };
