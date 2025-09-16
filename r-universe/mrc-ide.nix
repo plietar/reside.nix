@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/l6ng244i1jr5ji0mvw91prp25z8hddgn-source
+# Rscript generate-r-universe.R /nix/store/igygfhq3alp6bfmg6zzwjwb8dgpclmdi-source
 
 { self, derive }:
 with self; {
@@ -26,7 +26,7 @@ with self; {
   epireview = derive { name = "epireview"; version = "1.4.4"; buildInputs = [epitrix ggplot2 ggforce dplyr readr scales cli vroom knitr lifecycle tidyverse testthat rmarkdown]; };
   eppasm = derive { name = "eppasm"; version = "0.8.6"; buildInputs = [abind anclik binom epp fastmatch mvtnorm plyr readxl reshape2 vroom xml2 BH testthat knitr rmarkdown covr]; };
   first90 = derive { name = "first90"; version = "1.7.1"; buildInputs = [mvtnorm Matrix fastmatch Rcpp vroom BH Rcpp testthat]; };
-  frogger = derive { name = "frogger"; version = "0.1.3"; buildInputs = [Rcpp beers dplyr eppasm hdf5r magrittr Rcpp tidyr abind docopt devtools knitr leapfrog RcppEigen reshape2 rmarkdown SpectrumUtils testthat withr xml2]; };
+  frogger = derive { name = "frogger"; version = "0.1.4"; buildInputs = [Rcpp beers dplyr eppasm hdf5r magrittr Rcpp tidyr abind docopt devtools knitr leapfrog RcppEigen reshape2 rmarkdown SpectrumUtils testthat withr xml2]; };
   gonovax = derive { name = "gonovax"; version = "0.4.23"; buildInputs = [odin dde furrr progress mcstate testthat knitr rmarkdown]; };
   heartbeatr = derive { name = "heartbeatr"; version = "0.6.0"; buildInputs = [R6 redux processx testthat]; };
   hintr = derive { name = "hintr"; version = "1.2.13"; buildInputs = [digest docopt dplyr fs geojsonio glue ids jsonlite naomi naomi.options porcelain qs R6 readr readxl rlang rrq specio storr traduire V8 yaml zip callr cli covr duckdb httr jsonvalidate knitr mockery pkgload ps redux rmarkdown ssh testthat tidyselect withr]; };
