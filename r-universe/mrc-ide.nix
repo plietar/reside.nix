@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/sm934rrfxrib1pbd5w7a654gcw52inn1-source
+# Rscript generate-r-universe.R /nix/store/qbzdhl0x2yw6b6wrwk9wj50cwzdcyvyf-source
 
 { self, derive }:
 with self; {
@@ -29,7 +29,7 @@ with self; {
   frogger = derive { name = "frogger"; version = "0.1.4"; buildInputs = [Rcpp beers dplyr eppasm hdf5r magrittr Rcpp tidyr abind docopt devtools knitr leapfrog RcppEigen reshape2 rmarkdown SpectrumUtils testthat withr xml2]; };
   gonovax = derive { name = "gonovax"; version = "0.4.23"; buildInputs = [odin dde furrr progress mcstate testthat knitr rmarkdown]; };
   heartbeatr = derive { name = "heartbeatr"; version = "0.6.0"; buildInputs = [R6 redux processx testthat]; };
-  hintr = derive { name = "hintr"; version = "1.2.13"; buildInputs = [digest docopt dplyr fs geojsonio glue ids jsonlite naomi naomi.options porcelain qs R6 readr readxl rlang rrq specio storr traduire V8 yaml zip callr cli covr duckdb httr jsonvalidate knitr mockery pkgload ps redux rmarkdown ssh testthat tidyselect withr]; };
+  hintr = derive { name = "hintr"; version = "1.2.14"; buildInputs = [digest docopt dplyr fs geojsonio glue ids jsonlite naomi naomi.options porcelain qs R6 readr readxl rlang rrq specio storr traduire V8 yaml zip callr cli covr duckdb httr jsonvalidate knitr mockery pkgload ps redux rmarkdown ssh testthat tidyselect withr]; };
   hipercow = derive { name = "hipercow"; version = "1.1.5"; buildInputs = [audio cli fs ids pkgdepends rlang withr bench callr conan2 dust furrr future knitr logwatch mockery openssl prettyunits redux rmarkdown rrq testthat]; };
   hipercow_dide = derive { name = "hipercow.dide"; version = "1.1.5"; buildInputs = [cli conan2 crayon fs glue hipercow httr ids jsonlite keyring logwatch openssl pkgdepends rematch rstudioapi rlang xml2 mockery testthat withr]; };
   individual = derive { name = "individual"; version = "0.1.18"; buildInputs = [R6 Rcpp ggplot2 knitr mockery rmarkdown pkgdown testthat xml2 bench Rcpp testthat]; };
@@ -44,7 +44,7 @@ with self; {
   mockr = derive { name = "mockr"; version = "0.2.0.9002"; buildInputs = [rlang withr covr fs knitr pkgload rmarkdown testthat usethis]; };
   mode = derive { name = "mode"; version = "0.1.14"; buildInputs = [R6 cpp11 dust glue pkgbuild pkgload callr decor dde mockery testthat]; };
   montagu = derive { name = "montagu"; version = "0.6.1"; buildInputs = [R6 getPass httr jsonlite openssl progress storr knitr orderly orderlyweb rmarkdown sys testthat withr]; };
-  monty = derive { name = "monty"; version = "0.4.3"; buildInputs = [cli rlang cpp11 callr cpp11 coda decor knitr mockery mvtnorm numDeriv pkgload posterior rmarkdown testthat withr]; };
+  monty = derive { name = "monty"; version = "0.4.4"; buildInputs = [cli rlang cpp11 callr cpp11 coda decor knitr mockery mvtnorm numDeriv pkgload posterior rmarkdown testthat withr]; };
   moz_utils = derive { name = "moz.utils"; version = "0.1.90"; buildInputs = [dplyr ggplot2 gtools magrittr orderly1 orderlyweb plyr purrr rprojroot sf]; };
   mpoxseir = derive { name = "mpoxseir"; version = "0.2.28"; buildInputs = [cpp11 dust2 monty odin2 testthat dust2 squire dplyr tidyr plyr]; };
   naomi = derive { name = "naomi"; version = "2.10.15"; buildInputs = [DBI Matrix R6 TMB assertthat brio data.tree dplyr eppasm gt first90 forcats fs ggplot2 magrittr mvtnorm naomi.options openxlsx plotly prettyunits qs readr rlang rmarkdown sf spdep stringr tidyr tidyselect traduire withr writexl yaml zip zoo DiagrammeR covr datamodelr duckdb here knitr lubridate mockery mockr readxl rvest scales testthat tibble tidyverse viridis RcppEigen TMB]; };
@@ -57,7 +57,7 @@ with self; {
   odin_js = derive { name = "odin.js"; version = "0.1.11"; buildInputs = [R6 V8 jsonlite odin cinterpolate deSolve testthat]; };
   odin_ui = derive { name = "odin.ui"; version = "0.3.3"; buildInputs = [dde dfoptim ids jsonlite plotly markdown odin remotesave shiny shinyAce shinycssloaders shinyjqui shinyjs subplex yaml RSelenium callr stevedore testthat]; };
   odin2 = derive { name = "odin2"; version = "0.3.38"; buildInputs = [cli dust2 glue monty rlang decor deSolve fs knitr rmarkdown mockery numDeriv pkgload testthat withr]; };
-  orderly = derive { name = "orderly"; version = "1.99.88"; buildInputs = [R6 cli diffobj fs gert httr2 jsonlite openssl rlang rstudioapi vctrs withr yaml DBI RSQLite callr jsonvalidate knitr mockery pkgload processx rmarkdown testthat webfakes]; };
+  orderly = derive { name = "orderly"; version = "1.99.89"; buildInputs = [R6 cli diffobj fs gert httr2 jsonlite openssl rlang rstudioapi vctrs withr yaml DBI RSQLite callr jsonvalidate knitr mockery pkgload processx rmarkdown testthat webfakes]; };
   orderly_db = derive { name = "orderly.db"; version = "0.1.4"; buildInputs = [DBI fs jsonlite orderly RSQLite jsonvalidate knitr mockery rmarkdown testthat withr]; };
   orderly_sharedfile = derive { name = "orderly.sharedfile"; version = "0.1.1"; buildInputs = [cli fs jsonlite orderly jsonvalidate testthat withr]; };
   orderly1 = derive { name = "orderly1"; version = "1.7.2"; buildInputs = [DBI R6 RSQLite crayon digest docopt fs gert ids withr yaml zip httr jsonlite knitr markdown mockery processx rmarkdown testthat vaultr]; };
