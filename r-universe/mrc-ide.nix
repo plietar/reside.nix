@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/zzy39k4i7981k7kamxwdxzdfdii86ykr-source
+# Rscript generate-r-universe.R /nix/store/zsgh6ahvmx428qcgr7mkyfbmhicdqb9x-source
 
 { self, derive }:
 with self; {
@@ -22,7 +22,7 @@ with self; {
   drjacoby = derive { name = "drjacoby"; version = "1.5.4"; buildInputs = [Rcpp Rcpp coda ggplot2 usethis rlang cowplot dplyr magrittr GGally tidyr testthat covr knitr rmarkdown microbenchmark gridExtra]; };
   duckdb = derive { name = "duckdb"; version = "0.9.1"; buildInputs = [DBI arrow bit64 callr DBItest dplyr dbplyr rlang testthat tibble vctrs withr adbcdrivermanager]; };
   dust = derive { name = "dust"; version = "0.15.3"; buildInputs = [R6 cpp11 glue pkgbuild pkgload withr cpp11 bench brio callr curl dde decor fs knitr mockery rmarkdown testthat]; };
-  dust2 = derive { name = "dust2"; version = "0.3.26"; buildInputs = [cli monty rlang cpp11 monty callr cpp11 decor fs glue knitr mockery numDeriv pkgbuild pkgload rmarkdown testthat withr]; };
+  dust2 = derive { name = "dust2"; version = "0.3.28"; buildInputs = [cli monty rlang cpp11 monty callr cpp11 decor fs glue knitr mockery numDeriv pkgbuild pkgload rmarkdown testthat withr]; };
   epireview = derive { name = "epireview"; version = "1.4.4"; buildInputs = [epitrix ggplot2 ggforce dplyr readr scales cli vroom knitr lifecycle tidyverse testthat rmarkdown]; };
   eppasm = derive { name = "eppasm"; version = "0.8.6"; buildInputs = [abind anclik binom epp fastmatch mvtnorm plyr readxl reshape2 vroom xml2 BH testthat knitr rmarkdown covr]; };
   first90 = derive { name = "first90"; version = "1.7.1"; buildInputs = [mvtnorm Matrix fastmatch Rcpp vroom BH Rcpp testthat]; };
@@ -58,7 +58,7 @@ with self; {
   odin_ui = derive { name = "odin.ui"; version = "0.3.3"; buildInputs = [dde dfoptim ids jsonlite plotly markdown odin remotesave shiny shinyAce shinycssloaders shinyjqui shinyjs subplex yaml RSelenium callr stevedore testthat]; };
   odin2 = derive { name = "odin2"; version = "0.3.38"; buildInputs = [cli dust2 glue monty rlang decor deSolve fs knitr rmarkdown mockery numDeriv pkgload testthat withr]; };
   orderly = derive { name = "orderly"; version = "1.99.90"; buildInputs = [R6 cli diffobj fs gert httr2 jsonlite openssl rlang rstudioapi vctrs withr yaml DBI RSQLite callr jsonvalidate knitr mockery pkgload processx rmarkdown testthat webfakes]; };
-  orderly_db = derive { name = "orderly.db"; version = "0.1.4"; buildInputs = [DBI fs jsonlite orderly RSQLite jsonvalidate knitr mockery rmarkdown testthat withr]; };
+  orderly_db = derive { name = "orderly.db"; version = "0.1.5"; buildInputs = [DBI fs jsonlite orderly RSQLite jsonvalidate knitr mockery rmarkdown testthat withr]; };
   orderly_sharedfile = derive { name = "orderly.sharedfile"; version = "0.1.1"; buildInputs = [cli fs jsonlite orderly jsonvalidate testthat withr]; };
   orderly1 = derive { name = "orderly1"; version = "1.7.2"; buildInputs = [DBI R6 RSQLite crayon digest docopt fs gert ids withr yaml zip httr jsonlite knitr markdown mockery processx rmarkdown testthat vaultr]; };
   orderly2 = derive { name = "orderly2"; version = "1.99.99"; buildInputs = [orderly]; };
