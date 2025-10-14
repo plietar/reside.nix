@@ -21,11 +21,11 @@
     "mrc-ide": {
       "flake": false,
       "locked": {
-        "lastModified": 1759999162,
-        "narHash": "sha256-N/kpFh355EsmTXotYRSX+9olHpHvC+DoC7QHw5YFKX4=",
+        "lastModified": 1760373517,
+        "narHash": "sha256-B0InEa1PdAzhDsg8eDfUIH6WvtJBtgoIF467rZfZ8Mk=",
         "ref": "refs/heads/master",
-        "rev": "69e8c7a61d58551e3b64da46ac443107c7142913",
-        "revCount": 2117,
+        "rev": "4928db73907028f4c503223f1baf9f6ae03d986a",
+        "revCount": 2121,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/r-universe/mrc-ide"

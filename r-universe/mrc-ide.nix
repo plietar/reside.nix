@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/x79xsi69id5r89w2v7qgbs3fjqsmyh23-source
+# Rscript generate-r-universe.R /nix/store/sg15s0ikarg182sfzmhhqrq5f5zffq3z-source
 
 { self, derive }:
 with self; {
@@ -26,12 +26,12 @@ with self; {
   epireview = derive { name = "epireview"; version = "1.4.4"; buildInputs = [epitrix ggplot2 ggforce dplyr readr scales cli vroom knitr lifecycle tidyverse testthat rmarkdown]; };
   eppasm = derive { name = "eppasm"; version = "0.8.6"; buildInputs = [abind anclik binom epp fastmatch mvtnorm plyr readxl reshape2 vroom xml2 BH testthat knitr rmarkdown covr]; };
   first90 = derive { name = "first90"; version = "1.7.1"; buildInputs = [mvtnorm Matrix fastmatch Rcpp vroom BH Rcpp testthat]; };
-  frogger = derive { name = "frogger"; version = "0.1.4"; buildInputs = [Rcpp beers dplyr eppasm hdf5r magrittr Rcpp tidyr abind docopt devtools knitr leapfrog RcppEigen reshape2 rmarkdown SpectrumUtils testthat withr xml2]; };
+  frogger = derive { name = "frogger"; version = "0.1.5"; buildInputs = [Rcpp beers dplyr eppasm hdf5r magrittr Rcpp tidyr abind docopt devtools knitr leapfrog RcppEigen reshape2 rmarkdown SpectrumUtils testthat withr xml2]; };
   gonovax = derive { name = "gonovax"; version = "0.4.23"; buildInputs = [odin dde furrr progress mcstate testthat knitr rmarkdown]; };
   heartbeatr = derive { name = "heartbeatr"; version = "0.6.0"; buildInputs = [R6 redux processx testthat]; };
   hintr = derive { name = "hintr"; version = "1.2.14"; buildInputs = [digest docopt dplyr fs geojsonio glue ids jsonlite naomi naomi.options porcelain qs R6 readr readxl rlang rrq specio storr traduire V8 yaml zip callr cli covr duckdb httr jsonvalidate knitr mockery pkgload ps redux rmarkdown ssh testthat tidyselect withr]; };
-  hipercow = derive { name = "hipercow"; version = "1.1.5"; buildInputs = [audio cli fs ids pkgdepends rlang withr bench callr conan2 dust furrr future knitr logwatch mockery openssl prettyunits redux rmarkdown rrq testthat]; };
-  hipercow_dide = derive { name = "hipercow.dide"; version = "1.1.5"; buildInputs = [cli conan2 crayon fs glue hipercow httr ids jsonlite keyring logwatch openssl pkgdepends rematch rstudioapi rlang xml2 mockery testthat withr]; };
+  hipercow = derive { name = "hipercow"; version = "1.1.6"; buildInputs = [audio cli fs ids pkgdepends rlang withr bench callr conan2 cyphr dust furrr future knitr logwatch mockery openssl prettyunits redux rmarkdown rrq testthat]; };
+  hipercow_dide = derive { name = "hipercow.dide"; version = "1.1.6"; buildInputs = [cli conan2 crayon fs glue hipercow httr ids jsonlite keyring logwatch openssl pkgdepends rematch rstudioapi rlang xml2 mockery testthat withr]; };
   individual = derive { name = "individual"; version = "0.1.18"; buildInputs = [R6 Rcpp ggplot2 knitr mockery rmarkdown pkgdown testthat xml2 bench Rcpp testthat]; };
   jenner = derive { name = "jenner"; version = "0.0.27"; buildInputs = [DBI RcppRoll RPostgres vaultr whisker yaml RSQLite testthat]; };
   jointlyr = derive { name = "jointlyr"; version = "0.0.1"; buildInputs = [EpiEstim Rcpp RcppParallel rstan rstantools BH Rcpp RcppEigen RcppParallel rstan StanHeaders knitr rmarkdown]; };
