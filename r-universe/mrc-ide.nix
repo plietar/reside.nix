@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/2asivdp70yx1xzdsf4p0k486njr8sdsv-source
+# Rscript generate-r-universe.R /nix/store/rkw3zfpsw4ibid9x8carkkds4hamfff4-source
 
 { self, derive }:
 with self; {
@@ -56,7 +56,7 @@ with self; {
   odin_dust = derive { name = "odin.dust"; version = "0.3.13"; buildInputs = [R6 brio cpp11 decor dust odin tibble vctrs dde knitr mockery pkgload rmarkdown socialmixr testthat]; };
   odin_js = derive { name = "odin.js"; version = "0.1.11"; buildInputs = [R6 V8 jsonlite odin cinterpolate deSolve testthat]; };
   odin_ui = derive { name = "odin.ui"; version = "0.3.3"; buildInputs = [dde dfoptim ids jsonlite plotly markdown odin remotesave shiny shinyAce shinycssloaders shinyjqui shinyjs subplex yaml RSelenium callr stevedore testthat]; };
-  odin2 = derive { name = "odin2"; version = "0.3.39"; buildInputs = [cli dust2 glue monty rlang decor deSolve fs knitr rmarkdown mockery numDeriv pkgload testthat withr]; };
+  odin2 = derive { name = "odin2"; version = "0.3.40"; buildInputs = [cli dust2 glue monty rlang decor deSolve fs knitr rmarkdown mockery numDeriv pkgload testthat withr]; };
   orderly = derive { name = "orderly"; version = "2.0.0"; buildInputs = [R6 cli diffobj fs gert httr2 jsonlite openssl rlang rstudioapi vctrs withr yaml DBI RSQLite callr jsonvalidate knitr mockery pkgload processx rmarkdown testthat webfakes]; };
   orderly_db = derive { name = "orderly.db"; version = "0.1.5"; buildInputs = [DBI fs jsonlite orderly RSQLite jsonvalidate knitr mockery rmarkdown testthat withr]; };
   orderly_sharedfile = derive { name = "orderly.sharedfile"; version = "0.1.1"; buildInputs = [cli fs jsonlite orderly jsonvalidate testthat withr]; };
