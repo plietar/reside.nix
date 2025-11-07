@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/rzcpfmgh6cjzg209ki041a9sxmspr70z-source
+# Rscript generate-r-universe.R /nix/store/r51s00fpflzahb0v1d8lx0zr3hrmxwyx-source
 
 { self, derive }:
 with self; {
@@ -72,6 +72,6 @@ with self; {
   threemc = derive { name = "threemc"; version = "0.1.45"; buildInputs = [dplyr sf rlang TMB Matrix spdep tidyr data.table R.utils mgcv stringr loo mvtnorm scoringutils covr tidyverse testthat knitr rmarkdown ggplot2 scales goodpractice TMB RcppEigen]; };
   traduire = derive { name = "traduire"; version = "0.1.1"; buildInputs = [V8 R6 glue jsonlite knitr mockery rmarkdown testthat]; };
   vaultr = derive { name = "vaultr"; version = "1.2.0"; buildInputs = [R6 getPass httr jsonlite knitr mockery processx rmarkdown testthat withr]; };
-  vimpact = derive { name = "vimpact"; version = "0.1.5"; buildInputs = [DBI dbplyr dplyr glue magrittr rlang RPostgres vaultr fakerbase ggplot2 htmltools knitr mockery mockr testthat retry rmarkdown RSQLite withr]; };
+  vimpact = derive { name = "vimpact"; version = "0.1.6"; buildInputs = [DBI dbplyr dplyr glue magrittr rlang RPostgres vaultr fakerbase ggplot2 htmltools knitr mockery mockr testthat retry rmarkdown RSQLite withr]; };
   weighter = derive { name = "weighter"; version = "0.0.1"; buildInputs = [covr testthat]; };
 }
