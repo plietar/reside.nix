@@ -1,7 +1,7 @@
 # This file is generated from generate-r-universe DO NOT EDIT.
 # Execute the following command to update the file.
 #
-# Rscript generate-r-universe.R /nix/store/lhixhz0mks0wg6gj21kackamdsxx3vqg-source
+# Rscript generate-r-universe.R /nix/store/dxmxdj2i3jllaxbqfnkwh7d28xzy64as-source
 
 { self, derive }:
 with self; {
@@ -30,8 +30,8 @@ with self; {
   gonovax = derive { name = "gonovax"; version = "0.4.23"; buildInputs = [odin dde furrr progress mcstate testthat knitr rmarkdown]; };
   heartbeatr = derive { name = "heartbeatr"; version = "0.6.0"; buildInputs = [R6 redux processx testthat]; };
   hintr = derive { name = "hintr"; version = "1.2.15"; buildInputs = [digest docopt dplyr fs geojsonio glue ids jsonlite naomi naomi.options porcelain qs R6 readr readxl rlang rrq specio storr traduire V8 yaml zip askpass callr cli covr duckdb httr jsonvalidate knitr mockery pkgload ps redux rmarkdown ssh testthat tidyselect withr]; };
-  hipercow = derive { name = "hipercow"; version = "1.1.6"; buildInputs = [audio cli fs ids pkgdepends rlang withr bench callr conan2 cyphr dust furrr future knitr logwatch mockery openssl prettyunits redux rmarkdown rrq testthat]; };
-  hipercow_dide = derive { name = "hipercow.dide"; version = "1.1.6"; buildInputs = [cli conan2 crayon fs glue hipercow httr ids jsonlite keyring logwatch openssl pkgdepends rematch rstudioapi rlang xml2 mockery testthat withr]; };
+  hipercow = derive { name = "hipercow"; version = "1.1.7"; buildInputs = [audio cli fs ids pkgdepends rlang withr bench callr conan2 cyphr dust furrr future knitr logwatch mockery openssl prettyunits redux rmarkdown rrq testthat]; };
+  hipercow_dide = derive { name = "hipercow.dide"; version = "1.1.7"; buildInputs = [cli conan2 crayon fs glue hipercow httr ids jsonlite keyring logwatch openssl pkgdepends rematch rstudioapi rlang xml2 mockery testthat withr]; };
   individual = derive { name = "individual"; version = "0.1.18"; buildInputs = [R6 Rcpp ggplot2 knitr mockery rmarkdown pkgdown testthat xml2 bench Rcpp testthat]; };
   jenner = derive { name = "jenner"; version = "0.0.27"; buildInputs = [DBI RcppRoll RPostgres vaultr whisker yaml RSQLite testthat]; };
   jointlyr = derive { name = "jointlyr"; version = "0.0.1"; buildInputs = [EpiEstim Rcpp RcppParallel rstan rstantools BH Rcpp RcppEigen RcppParallel rstan StanHeaders knitr rmarkdown]; };
@@ -49,7 +49,7 @@ with self; {
   mpoxseir = derive { name = "mpoxseir"; version = "0.2.28"; buildInputs = [cpp11 dust2 monty odin2 testthat dust2 squire dplyr tidyr plyr]; };
   naomi = derive { name = "naomi"; version = "2.10.15"; buildInputs = [DBI Matrix R6 TMB assertthat brio data.tree dplyr eppasm gt first90 forcats fs ggplot2 magrittr mvtnorm naomi.options openxlsx plotly prettyunits qs readr rlang rmarkdown sf spdep stringr tidyr tidyselect traduire withr writexl yaml zip zoo DiagrammeR covr datamodelr duckdb here knitr lubridate mockery mockr readxl rvest scales testthat tibble tidyverse viridis RcppEigen TMB]; };
   naomi_options = derive { name = "naomi.options"; version = "1.3.1"; buildInputs = [data.table glue jsonlite traduire jsonvalidate testthat mockery]; };
-  naomi_resources = derive { name = "naomi.resources"; version = "0.0.5"; buildInputs = [cli readr testthat]; };
+  naomi_resources = derive { name = "naomi.resources"; version = "0.0.7"; buildInputs = [cli readr gt knitr naomi rmarkdown tibble testthat]; };
   naomi_utils = derive { name = "naomi.utils"; version = "0.0.16"; buildInputs = [dplyr exactextractr forcats ggplot2 haven hintr lubridate magrittr raster rdhs sf spud survey tidyr testthat]; };
   nomad = derive { name = "nomad"; version = "0.0.1"; buildInputs = [provisionr yaml testthat]; };
   odin = derive { name = "odin"; version = "1.5.11"; buildInputs = [R6 cinterpolate deSolve digest glue jsonlite ring withr V8 dde jsonvalidate knitr mockery pkgbuild pkgload rlang rmarkdown testthat]; };
